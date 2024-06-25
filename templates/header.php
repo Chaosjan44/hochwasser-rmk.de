@@ -22,7 +22,7 @@ setlocale (LC_ALL, 'de_DE.UTF-8', 'de_DE@euro', 'de_DE', 'de', 'ge', 'de_DE.ISO_
     <script src="/js/custom.js"></script>
     <link rel="icon" type="image/png" href="/favicon.png" sizes="1024x1024"/>
     <link rel="apple-touch-icon" href="/favicon.png"/>
-    <title></title>
+    <title>Petition</title>
 </head>
 
     <header class="sticky-top">
