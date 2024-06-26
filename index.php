@@ -8,10 +8,25 @@
             <h2 class="text-center text-kolping-orange">Petition</h2>
             <h1 class="display-4 text-center">Forderung and die Regierung den Hochwasseropfern<br>in Rudersberg & Umgebung zu helfen</h1>
             <div class="row py-3">
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"><img src="imgs/petition-qrcode.png" alt="QR-Code zu der Petition" class="img-fluid"><span><a href="https://chng.it/BLv9tWxcYH" class="clink text-size-x-large text-center">https://chng.it/BLv9tWxcYH</a></span></div>
-                <div class="col-3"></div>
+                <div class="col-2"></div>
+                <div class="col-3"><img src="imgs/petition-qrcode.png" alt="QR-Code zu der Petition" class="img-fluid"><span><a href="https://chng.it/BLv9tWxcYH" class="text-kolping-orange text-size-x-large text-center">https://chng.it/BLv9tWxcYH</a></span></div>
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <div class="card cbg3 shadow1" style="opacity: 80%;">
+                        <div class="card-body ctext">
+                            <h3 class="card-title text-center">Unser Flyer</h3>
+                            <div class="justify-content-center text-center">
+                                <form method="get" action="files/Flyer_Petitionv1.pdf">
+                                    <button class="btn btn-kolping mx-auto my-2" type="submit">
+                                        <span class="card-text">Herunterladen</span>
+                                        <i class="bi bi-download"></i>
+                                    </button>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
             </div>
         </div>
         <?php else: ?>
@@ -21,7 +36,26 @@
             <h1 class="display-4 text-center">Forderung and die Regierung den Hochwasseropfern<br>in Rudersberg & Umgebung zu helfen</h1>
             <div class="row py-3">
                 <div class="col-1"></div>
-                <div class="col-10"><img src="imgs/petition-qrcode.png" alt="QR-Code zu der Petition" class="img-fluid"><span><a href="https://chng.it/BLv9tWxcYH" class="clink text-size-x-large text-center">https://chng.it/BLv9tWxcYH</a></span></div>
+                <div class="col-10"><img src="imgs/petition-qrcode.png" alt="QR-Code zu der Petition" class="img-fluid"><span><a href="https://chng.it/BLv9tWxcYH" class="text-kolping-orange text-size-x-large text-center">https://chng.it/BLv9tWxcYH</a></span></div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row py-2">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="card cbg3 shadow1" style="opacity: 80%;">
+                        <div class="card-body ctext">
+                            <h3 class="card-title text-center">Unser Flyer</h3>
+                            <div class="justify-content-center text-center">
+                                <form method="get" action="files/Flyer_Petitionv1.pdf">
+                                    <button class="btn btn-kolping mx-auto my-2" type="submit">
+                                        <span class="card-text">Herunterladen</span>
+                                        <i class="bi bi-download"></i>
+                                    </button>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-1"></div>
             </div>
         </div>
