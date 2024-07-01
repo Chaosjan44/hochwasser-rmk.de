@@ -16,7 +16,7 @@
                         <div class="card-body ctext">
                             <h3 class="card-title text-center">Unser Flyer</h3>
                             <div class="justify-content-center text-center">
-                                <form method="get" action="files/Flyer_Petitionv1.pdf">
+                                <form method="get" action="files/Flyer_Petition_V2.pdf">
                                     <button class="btn btn-kolping mx-auto my-2" type="submit">
                                         <span class="card-text">Herunterladen</span>
                                         <i class="bi bi-download"></i>
@@ -46,7 +46,7 @@
                         <div class="card-body ctext">
                             <h3 class="card-title text-center">Unser Flyer</h3>
                             <div class="justify-content-center text-center">
-                                <form method="get" action="files/Flyer_Petitionv1.pdf">
+                                <form method="get" action="files/Flyer_Petition_V2.pdf">
                                     <button class="btn btn-kolping mx-auto my-2" type="submit">
                                         <span class="card-text">Herunterladen</span>
                                         <i class="bi bi-download"></i>
