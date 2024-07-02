@@ -9,7 +9,7 @@
     <meta name="description" content="Petition - Fordern Sie die Regierung auf, den Hochwasseropfern in Rudersberg & Umgebung zu helfen">
     <meta name="author" content="Developed by Jan">
     <link rel="preload" href="/css/custom.css" as="stylesheet"> 
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="preload" src="/js/bootstrap.bundle.min.js" as="script"></link>
     <script defer data-domain="ihk.cellary.de" src="https://plausible.schniebs.dev/js/script.js"></script> <!-- kann entfernt werden, ist nur für Jan's Statistiken-->
     <link rel="stylesheet" href="/css/styles.css">          <!-- Link Stylesheet -->
     <script src="/js/custom.js"></script>
