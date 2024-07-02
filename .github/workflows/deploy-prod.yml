@@ -1,4 +1,4 @@
-name: push to hochwasser-rmk prod
+name: push to hochwasser-rmk main
 on:  
   push:
     branches:
@@ -18,5 +18,5 @@ jobs:
          name: id_rsa # optional
          known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - run: |
-        git remote add prod ssh://root@hochwasser-rmk.de:69/root/git/project.git
-        git push prod main
+        git remote add main ssh://root@159.69.244.216:69/root/git/project.git
+        git push main main
