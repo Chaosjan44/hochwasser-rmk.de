@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "concurrently \"@powershell copy node_modules/bootstrap-icons/font/fonts/* css/fonts\" \"sass ./scss/custom.scss ./css/custom.css\""
+    "build": "concurrently \"@powershell copy node_modules/bootstrap-icons/font/fonts/* css/fonts\" \"sass ./scss/custom.scss ./css/custom.css\" \"@powershell copy node_modules/bootstrap/dist/js/bootstrap.bundle.min.js js\""
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
