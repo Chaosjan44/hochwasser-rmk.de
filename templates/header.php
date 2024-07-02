@@ -1,29 +1,13 @@
 <?php
 require("php/functions.php");
 setlocale (LC_ALL, 'de_DE.UTF-8', 'de_DE@euro', 'de_DE', 'de', 'ge', 'de_DE.ISO_8859-1', 'German_Germany');
+session_start();
+if ($disheadercheck != true) {
+    $user = check_user();
+}
+
+require_once("templates/imports.php");
 ?>
-
-<!DOCTYPE html>
-
-<html lang="en" id="html">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Developed by Jan">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <!-- remember to remove "defer" incase I want stuff opening the second the page loads -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <script defer data-domain="hochwasser-rmk.de" src="https://plausible.schniebs.dev/js/script.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">          <!-- Link Stylesheet -->
-    <script src="/js/custom.js"></script>
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="1024x1024"/>
-    <link rel="apple-touch-icon" href="/favicon.png"/>
-    <title>Petition</title>
-</head>
 
     <header class="sticky-top">
         <div class="header-line text-end">
