@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Petition - Fordern Sie die Regierung auf, den Hochwasseropfern in Rudersberg & Umgebung zu helfen">
     <meta name="author" content="Developed by Jan">
-    <link rel="preload" href="/css/custom.css" as="stylesheet"> 
-    <link rel="preload" src="/js/bootstrap.bundle.min.js" as="script"></link>
+    <link rel="stylesheet" href="/css/custom.css"> 
+    <script rel="preload" src="/js/bootstrap.bundle.min.js" as="script"></script>
     <script defer data-domain="ihk.cellary.de" src="https://plausible.schniebs.dev/js/script.js"></script> <!-- kann entfernt werden, ist nur für Jan's Statistiken-->
     <link rel="stylesheet" href="/css/styles.css">          <!-- Link Stylesheet -->
     <script src="/js/custom.js"></script>
