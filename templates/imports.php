@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="de-DE" id="html">
+<html lang="de-DE" id="html" style="background-image: url('imgs/<?php if (!isMobile()) print("desktop.jpg"); else print("mobile.jpg")?>'); background-position: center; background-size: cover;">
 
 <head>
     <meta charset="UTF-8">
