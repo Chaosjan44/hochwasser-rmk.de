@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="de-DE" id="html">
+<html lang="de-DE" id="html" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">

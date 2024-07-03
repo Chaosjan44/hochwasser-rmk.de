@@ -26,7 +26,7 @@ $crdate = "2024";
         </div>
         <div class="row align-items-center">
             <div class="col-4 text-start"><a href="https://github.com/chaosjan44/hochwasser-rmk.de" target="#" class="me-2"><i class="bi ctext text-size-x-large bi-github"></i></a></div>
-            <div class="col-4 text-center ctext light">&copy; <?=$crdate?> Jan Schniebs</div>
+            <div class="col-4 text-center ctext light"><a href="/internal.php" class="ctext light">&copy; <?=$crdate?> Jan Schniebs</a></div>
         </div>
     </footer>
 <?php else: ?>
@@ -51,7 +51,7 @@ $crdate = "2024";
                 </div>
                 <div class="row justify-content-between align-items-center">
                     <div class="col-3 text-start px-0"><a href="https://github.com/chaosjan44/hochwasser-rmk.de" target="#" class="me-2"><i class="bi ctext text-size-x-large bi-github"></i></a></div>
-                    <div class="col-6 ctext text-start light ps-0">&copy; <?=$crdate?> Jan Schniebs</div>
+                    <div class="col-6 ctext text-start light ps-0"><a href="/internal.php" class="ctext light">&copy; <?=$crdate?> Jan Schniebs</a></div>
                 </div>
             </div>
         </div>

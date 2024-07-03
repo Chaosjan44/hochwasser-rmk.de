@@ -144,4 +144,93 @@ function check_cookie() {
 		return false;
 	}
 }
+
+function convertToWEBP($file, $compression_quality = 40)
+{
+    // check if file exists
+    if (!file_exists($file)) {
+        return false;
+    }
+    $file_type = exif_imagetype($file);
+    //https://www.php.net/manual/en/function.exif-imagetype.php
+    //exif_imagetype($file);
+    // 1    IMAGETYPE_GIF
+    // 2    IMAGETYPE_JPEG
+    // 3    IMAGETYPE_PNG
+    // 6    IMAGETYPE_BMP
+    // 15   IMAGETYPE_WBMP
+    // 16   IMAGETYPE_XBM
+    $output_file =  $file . '.webp';
+    if (file_exists($output_file)) {
+        return $output_file;
+    }
+    if (function_exists('imagewebp')) {
+        switch ($file_type) {
+            case '1': //IMAGETYPE_GIF
+                $image = imagecreatefromgif($file);
+                break;
+            case '2': //IMAGETYPE_JPEG
+                $image = imagecreatefromjpeg($file);
+                break;
+            case '3': //IMAGETYPE_PNG
+                    $image = imagecreatefrompng($file);
+                    imagepalettetotruecolor($image);
+                    imagealphablending($image, true);
+                    imagesavealpha($image, true);
+                    break;
+            case '6': // IMAGETYPE_BMP
+                $image = imagecreatefrombmp($file);
+                break;
+            case '15': //IMAGETYPE_Webp
+               return false;
+                break;
+            case '16': //IMAGETYPE_XBM
+                $image = imagecreatefromxbm($file);
+                break;
+            default:
+                return false;
+        }
+        // Save the image
+        $result = imagewebp($image, $output_file, $compression_quality);
+        if (false === $result) {
+            return false;
+        }
+        // Free up memory
+        imagedestroy($image);
+        return $output_file;
+    }
+    return false;
+}
+
+function getImgSizes($file) {
+	$info = getimagesize($file);
+	$width = $info[0];
+	$height = $info[1];
+	return ("height: " + $height + " width: " + $width);
+}
+
+function delBlogImages($images) {
+	global $pdo;
+	foreach ($images as $image) {
+		unlink(substr($image['source'], 1));
+		unlink(substr($image['source'] . ".webp", 1));
+		$stmt = $pdo->prepare('DELETE FROM blog_images where blog_images_id = ?');
+        $stmt->bindValue(1, $image['blog_images_id'], PDO::PARAM_INT);
+        $result = $stmt->execute();
+        if (!$result) {
+            error('Datenbank Fehler!', pdo_debugStrParams($stmt));
+        }
+	}
+}
+
+function delBlogPost($blog_entrys_id) {
+	global $pdo;
+	$stmt = $pdo->prepare('DELETE FROM blog_entrys where blog_entrys_id = ?');
+	$stmt->bindValue(1, $blog_entrys_id, PDO::PARAM_INT);
+	$result = $stmt->execute();
+	if (!$result) {
+		error('Datenbank Fehler!', pdo_debugStrParams($stmt));
+	}   
+	print("<script>location.href='blog.php'</script>");
+}
 ?>

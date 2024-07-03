@@ -1,14 +1,13 @@
 <?php
-require("php/functions.php");
 setlocale (LC_ALL, 'de_DE.UTF-8', 'de_DE@euro', 'de_DE', 'de', 'ge', 'de_DE.ISO_8859-1', 'German_Germany');
-session_start();
-if ($disheadercheck != true) {
-    $user = check_user();
+function isMobile1 () {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 }
+
 
 require_once("templates/imports.php");
 ?>
-<body style="background-image: url('imgs/<?php if (!isMobile()) print("desktop.jpg"); else print("mobile.jpg")?>'); background-position: center; background-size: cover;">
+<body style="background-image: url('imgs/<?php if (!isMobile1()) print("desktop.jpg"); else print("mobile.jpg")?>'); background-position: center; background-size: cover;">
     <header class="sticky-top">
         <div class="header-line text-end">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
